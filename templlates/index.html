@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome to Course Result Management System</h1>
+<div style="display:flex; justify-content:space-around; margin-top:30px;">
+    <div style="background:#0077cc;color:white;padding:20px;border-radius:10px;">
+        <h2>Total Students</h2>
+        <p>{{ total_students }}</p>
+    </div>
+    <div style="background:#0077cc;color:white;padding:20px;border-radius:10px;">
+        <h2>Total Courses</h2>
+        <p>{{ total_courses }}</p>
+    </div>
+</div>
+{% endblock %}
