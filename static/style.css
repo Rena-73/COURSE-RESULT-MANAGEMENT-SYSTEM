@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #1a73e8;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 30px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 8px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0b5ed7;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+th {
+    background-color: #1a73e8;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    font-weight: bold;
+}
+
+input, select, button {
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+form input, form select, form button {
+    width: 100%; /* all inputs and selects take full form width */
+    max-width: 300px; /* optional: limit the width */
+    box-sizing: border-box; /* include padding and border in width */
+}
+
+form input[type="number"] {
+    /* ensure numbers don't appear taller/wider than text */
+    padding: 8px;
+    font-size: 16px;
+}
+
