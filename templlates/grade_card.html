@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Grade Card</h2>
+<div class="card">
+    <p><strong>Name:</strong> {{ student[2] }}</p>
+    <p><strong>Roll No:</strong> {{ student[1] }}</p>
+    <p><strong>Department:</strong> {{ student[3] }}</p>
+    <p><strong>Year:</strong> {{ student[4] }}</p>
+</div>
+
+<table>
+    <tr>
+        <th>Course</th>
+        <th>Marks</th>
+        <th>Grade</th>
+    </tr>
+    {% for r, g in combined %}
+    <tr>
+        <td>{{ r[0] }}</td>
+        <td>{{ r[1] }}</td>
+        <td>{{ g }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h3>CGPA: {{ cgpa }}</h3>
+{% endblock %}
