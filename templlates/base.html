@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Result Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        {% if session.get('role') == 'admin' %}
+        <a href="{{ url_for('dashboard') }}">🏠 Dashboard</a>
+        <a href="{{ url_for('add_student') }}">➕ Add Student</a>
+        <a href="{{ url_for('view_students') }}">👥 View Students</a>
+        <a href="{{ url_for('add_course') }}">➕ Add Course</a>
+        <a href="{{ url_for('view_courses') }}">📘 View Courses</a>
+        <a href="{{ url_for('add_result') }}">🧾 Add Result</a>
+        <a href="{{ url_for('view_results') }}">📄 View Results</a>
+        {% elif session.get('role') == 'student' %}
+        <a href="{{ url_for('student_dashboard') }}">🏠 Dashboard</a>
+        <a href="{{ url_for('grade_card', student_id=session.get('student_id')) }}">📄 My Grade Card</a>
+        {% endif %}
+        <a href="{{ url_for('logout') }}">🚪 Logout</a>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
