@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add Result</h2>
+<form method="post">
+    <label>Student:</label>
+    <select name="student_id">
+        {% for s in students %}
+        <option value="{{ s[0] }}">{{ s[1] }} - {{ s[1] }}</option>
+        {% endfor %}
+    </select>
+
+    <label>Course:</label>
+    <select name="course_id">
+        {% for c in courses %}
+        <option value="{{ c[0] }}">{{ c[1] }}</option>
+        {% endfor %}
+    </select>
+
+    <input type="number" name="marks" placeholder="Marks" required>
+    <button type="submit">Add Result</button>
+</form>
+{% endblock %}
