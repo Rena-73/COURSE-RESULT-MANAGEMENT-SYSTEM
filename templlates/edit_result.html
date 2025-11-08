@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Edit Result</h2>
+<form method="post">
+    <label>Student:</label>
+    <select name="student_id">
+        {% for s in students %}
+        <option value="{{ s[0] }}" {% if s[0]==result[1] %}selected{% endif %}>{{ s[1] }}</option>
+        {% endfor %}
+    </select>
+
+    <label>Course:</label>
+    <select name="course_id">
+        {% for c in courses %}
+        <option value="{{ c[0] }}" {% if c[0]==result[2] %}selected{% endif %}>{{ c[1] }}</option>
+        {% endfor %}
+    </select>
+
+    <input type="number" name="marks" value="{{ result[3] }}" required>
+    <button type="submit">Update</button>
+</form>
+{% endblock %}
