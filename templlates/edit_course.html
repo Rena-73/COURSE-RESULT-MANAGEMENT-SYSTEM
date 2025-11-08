@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Edit Course</h2>
+<form method="post">
+    <input type="text" name="code" value="{{ course[1] }}" required>
+    <input type="text" name="name" value="{{ course[2] }}" required>
+    <input type="number" name="credits" value="{{ course[3] }}" required>
+    <button type="submit">Update</button>
+</form>
+{% endblock %}
