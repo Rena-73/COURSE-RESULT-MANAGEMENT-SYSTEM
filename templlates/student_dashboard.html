@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome, {{ student_name }}</h1>
+<p>Check your grade card to see your results and CGPA.</p>
+<a href="{{ url_for('grade_card', student_id=session.get('student_id')) }}" class="btn">View Grade Card</a>
+{% endblock %}
